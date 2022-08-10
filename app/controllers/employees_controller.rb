@@ -62,14 +62,15 @@ class EmployeesController < ApplicationController
   end
 
   # 現在、メールアドレスと入社日は入力できないため、ここで追加しています。
-  def add_params
-    unless @employee.email
-      @employee.email = 'sample@example.com'
-    end
-    unless @employee.date_of_joining
-      @employee.date_of_joining = Date.today
-    end
-  end
+  #入力フォームを追加したので不要
+  # def add_params
+  #   unless @employee.email
+  #     @employee.email = 'sample@example.com'
+  #   end
+  #   unless @employee.date_of_joining
+  #     @employee.date_of_joining = Date.today
+  #   end
+  # end
 
   def sort_column
     params[:sort] ? params[:sort] : 'number'
