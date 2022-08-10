@@ -27,7 +27,8 @@ class EmployeesController < ApplicationController
   end
 
   def update
-    add_params
+    #不要になったので削除
+    #add_params
 
     if @employee.update(employee_params)
       redirect_to employees_url, notice: "社員「#{@employee.last_name} #{@employee.first_name}」を更新しました。"
