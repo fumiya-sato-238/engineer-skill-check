@@ -11,7 +11,7 @@
 <!-- 入社年月日を追加 -->
 <div class="row">
   <span class="label">入社年月日</span>
-  <span><%= employee.date_of_joining %></span>
+  <span><%= employee.date_of_joining.year.to_s+"年"+employee.date_of_joining.month.to_s+"月"+employee.date_of_joining.day.to_s+"日" %></span>
 </div>
 
 <div class="row">
