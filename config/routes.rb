@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
+  get 'articles/new'
   resources :dashboard, only: :index
   root 'employees#index'
-  get '/news' => 'news#index'
+  get '/articles' => 'articles#index'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
