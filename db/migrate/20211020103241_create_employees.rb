@@ -11,6 +11,9 @@ class CreateEmployees < ActiveRecord::Migration[6.1]
       t.string           :email,                     null: false
       t.date             :date_of_joining,           null: false
       t.boolean          :employee_info_manage_auth, null: false,  default: false
+      #news_posting_authを追加
+      t.boolean          :news_posting_auth, null: false,  default: false
+
       t.datetime         :deleted_at,                null: true,   default: nil
 
       t.timestamps

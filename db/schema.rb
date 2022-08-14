@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2021_10_20_112406) do
     t.string "email", null: false
     t.date "date_of_joining", null: false
     t.boolean "employee_info_manage_auth", default: false, null: false
+    t.boolean "news_posting_auth", default: false, null: false
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
