@@ -1,5 +1,5 @@
 class NewsController < ApplicationController
-    def top
+    def index
     end
 
 end
