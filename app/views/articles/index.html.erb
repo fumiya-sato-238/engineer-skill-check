@@ -1,5 +1,20 @@
-<% @articles.each do |article| %>
-    <span><%= article.title %></span>
-    <span><%= article.content %></span>
+<div class = "article_index">
+    <% if current_user.news_posting_auth %>
+        <p class="new_employee"><%= link_to '新規追加', '/articles/new', class: 'btn' %></p>
+    <% end %>
+    <table class="employee_table">
+        <thead>
+        <tr>
+            <th class="title">タイトル</th>
+            <th class="content">内容</th>
+        </tr>
+        </thead>
+        <tbody>
+            <% @articles.each do |article| %>
+                <th><%= article.title %></th>
+                <th><%= article.content %></th>
 
-<% end %>
+            <% end %>
+        </tbody>
+    </table>
+</div>
