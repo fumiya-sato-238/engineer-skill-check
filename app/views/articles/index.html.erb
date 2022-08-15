@@ -1,1 +1,5 @@
-<h1>お知らせ一覧</h1>
+<% @articles.each do |article| %>
+    <span><%= article.title %></span>
+    <span><%= article.content %></span>
+
+<% end %>

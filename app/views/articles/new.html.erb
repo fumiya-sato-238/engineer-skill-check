@@ -1,2 +1,10 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<h1>お知らせ投稿</h1>
+<%= form_with model: Article.new, url: '/articles', local:true do |f| %>
+  <h4>タイトル</h4>
+  <%= f.text_field :title %>
+  <h4>内容</h4>
+  <%= f.text_area :content %>
+  <h4>投稿者</h4>
+  <%= f.text_field :author %>
+  <%= f.submit '投稿' %>
+<% end %>
