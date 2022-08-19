@@ -1,4 +1,4 @@
-<div class = "article_index">
+<div class = "employee_index">
     <% if current_user.news_posting_auth %>
         <p class="new_employee"><%= link_to '新規追加', '/articles/new', class: 'btn' %></p>
     <% end %>
@@ -6,13 +6,13 @@
         <thead>
         <tr>
             <th class="title">タイトル</th>
-            <th class="content">内容</th>
+            <th class="date">公開日</th>
         </tr>
         </thead>
         <tbody>
             <% @articles.each do |article| %>
                 <th><%= article.title %></th>
-                <th><%= article.content %></th>
+                <th><%= article.created_at %></th>
 
             <% end %>
         </tbody>
